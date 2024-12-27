@@ -1,0 +1,21 @@
+module Multiplier_Avalon (
+    input wire clk,              // Clock signal
+    input wire reset_n,          // Active-low reset
+    input wire [31:0] p1,        // First operand
+    input wire [31:0] p2,        // Second operand
+    input wire write,            // Avalon-MM write signal
+    output reg [31:0] product,   // Product output
+    output reg done              // Operation done flag
+);
+    always @(posedge clk or negedge reset_n) begin
+        if (!reset_n) begin
+            product <= 0;
+            done <= 0;
+        end else if (write) begin
+            product <= p1 * p2;
+            done <= 1;
+        end else begin
+            done <= 0;
+        end
+    end
+endmodule
