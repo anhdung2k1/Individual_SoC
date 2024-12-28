@@ -1,0 +1,109 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <string.h>
+
+// Function selectors
+#define FUNC_ADDER       0x0
+#define FUNC_ADDER_P2    0x1
+#define FUNC_MULTIPLIER  0x2
+#define FUNC_MULTIPLIER_M2 0x3
+#define FUNC_PRIME_GEN   0x4
+
+// Internal registers
+uint32_t p1 = 0, p2 = 0;           // Adder registers
+uint32_t m1 = 0, m2 = 0;           // Multiplier registers
+uint32_t primes[256] = {0};        // Array for prime numbers
+uint32_t max = 0;                  // Maximum number for prime generation
+uint32_t oData = 0;                // Output data
+
+// Function prototypes
+void handle_write(uint8_t address, uint32_t data);
+uint32_t handle_read(uint8_t address, uint32_t index);
+void generate_primes(uint32_t max);
+bool is_prime(uint32_t number);
+
+int main() {
+    printf("========== Starting Prime Number Generator ===========\n");
+
+    // Example usage
+    handle_write(FUNC_ADDER, 10); // Write to p1
+    handle_write(FUNC_ADDER_P2, 20); // Write to p2
+    printf("Adder result: %u\n", (unsigned int)handle_read(FUNC_ADDER, 0));
+
+    handle_write(FUNC_MULTIPLIER, 3); // Write to m1
+    handle_write(FUNC_MULTIPLIER_M2, 4); // Write to m2
+    printf("Multiplier result: %u\n", (unsigned int)handle_read(FUNC_MULTIPLIER, 0));
+
+    handle_write(FUNC_PRIME_GEN, 50); // Generate primes up to 50
+    printf("First 10 primes: ");
+    for (int i = 0; i < 10; i++) {
+        printf("%u ", (unsigned int)handle_read(FUNC_PRIME_GEN, i));
+    }
+    printf("\n");
+
+    return 0;
+}
+
+void handle_write(uint8_t address, uint32_t data) {
+    switch (address) {
+        case FUNC_ADDER:
+            p1 = data;
+            break;
+        case FUNC_ADDER_P2:
+            p2 = data;
+            break;
+        case FUNC_MULTIPLIER:
+            m1 = data;
+            break;
+        case FUNC_MULTIPLIER_M2:
+            m2 = data;
+            break;
+        case FUNC_PRIME_GEN:
+            max = data;
+            generate_primes(max);
+            break;
+        default:
+            printf("Invalid write address\n");
+    }
+}
+
+uint32_t handle_read(uint8_t address, uint32_t index) {
+    switch (address) {
+        case FUNC_ADDER:
+            oData = p1 + p2;
+            break;
+        case FUNC_MULTIPLIER:
+            oData = m1 * m2;
+            break;
+        case FUNC_PRIME_GEN:
+            if (index < 256) {
+                oData = primes[index];
+            } else {
+                oData = 0; // Return 0 for out-of-bound indices
+            }
+            break;
+        default:
+            printf("Invalid read address\n");
+            oData = 0;
+    }
+    return oData;
+}
+
+void generate_primes(uint32_t max) {
+    memset(primes, 0, sizeof(primes));
+    uint32_t count = 0;
+    for (uint32_t i = 2; i <= max && count < 256; i++) {
+        if (is_prime(i)) {
+            primes[count++] = i;
+        }
+    }
+}
+
+bool is_prime(uint32_t number) {
+    if (number < 2) return false;
+    for (uint32_t i = 2; i * i <= number; i++) {
+        if (number % i == 0) return false;
+    }
+    return true;
+}

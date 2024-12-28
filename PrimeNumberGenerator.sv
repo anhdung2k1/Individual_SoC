@@ -3,8 +3,9 @@ module PrimeNumberGenerator (
     input wire iReset_n,           // Active-low reset
     input wire iChip_select_n,     // Chip select
     input wire iWrite_n,           // Write signal
+    input wire iRead_n,            // Read signal
     input wire [31:0] iData,       // Data input
-    input wire [2:0] address,      // Address for function selection
+    input wire [2:0] iAddress,      // iAddress for function selection
     output reg [31:0] oData        // Data output
 );
     // Function selector
@@ -35,17 +36,17 @@ module PrimeNumberGenerator (
         end else begin
             if (!iChip_select_n && !iWrite_n) begin
                 // Handle write operations
-                case (address)
+                case (iAddress)
                     FUNC_ADDER: begin
-                        if (address[1:0] == 2'b00) p1 <= iData; // Write to p1
-                        if (address[1:0] == 2'b01) p2 <= iData; // Write to p2
+                        if (iAddress[1:0] == 2'b00) p1 <= iData; // Write to p1
+                        if (iAddress[1:0] == 2'b01) p2 <= iData; // Write to p2
                     end
                     FUNC_MULTIPLIER: begin
-                        if (address[1:0] == 2'b00) m1 <= iData; // Write to m1
-                        if (address[1:0] == 2'b01) m2 <= iData; // Write to m2
+                        if (iAddress[1:0] == 2'b00) m1 <= iData; // Write to m1
+                        if (iAddress[1:0] == 2'b01) m2 <= iData; // Write to m2
                     end
                     FUNC_PRIME_GEN: begin
-                        if (address[1:0] == 2'b00) begin
+                        if (iAddress[1:0] == 2'b00) begin
                             max <= iData[9:0]; // Write max value
                             // Generate prime numbers
                             j = 0;
@@ -65,13 +66,13 @@ module PrimeNumberGenerator (
                         end
                     end
                 endcase
-            end else begin
+            end else if (!iChip_select_n && !iRead_n) begin
                 // Handle read operations
-                case (address)
+                case (iAddress)
                     FUNC_ADDER: oData <= p1 + p2; // Perform addition
                     FUNC_MULTIPLIER: oData <= m1 * m2; // Perform multiplication
                     FUNC_PRIME_GEN: begin
-                        if (address[1:0] == 2'b01) begin
+                        if (iAddress[1:0] == 2'b01) begin
                             oData <= primes[iData[7:0]]; // Read specific prime by index
                         end
                     end

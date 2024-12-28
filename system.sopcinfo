@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="system" kind="system" version="1.0" fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2024.12.28.11:04:18 -->
+ <!-- 2024.12.28.14:09:02 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1735358657</value>
+  <value>1735369742</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -2256,7 +2256,7 @@ parameters are a RESULT of the module parameters. -->
     <role>reset_n</role>
    </port>
   </interface>
-  <interface name="avalon_slave_0_1" kind="avalon_slave" version="18.1">
+  <interface name="avalon_slave_0" kind="avalon_slave" version="18.1">
    <!-- The connection points exposed by a module instance for the
 particular module parameters. Connection points and their
 parameters are a RESULT of the module parameters. -->
@@ -2591,10 +2591,10 @@ parameters are a RESULT of the module parameters. -->
    <type>avalon</type>
    <isStart>false</isStart>
    <port>
-    <name>address</name>
+    <name>iRead_n</name>
     <direction>Input</direction>
-    <width>3</width>
-    <role>address</role>
+    <width>1</width>
+    <role>read_n</role>
    </port>
    <port>
     <name>iChip_select_n</name>
@@ -2603,22 +2603,28 @@ parameters are a RESULT of the module parameters. -->
     <role>chipselect_n</role>
    </port>
    <port>
-    <name>iWrite_n</name>
-    <direction>Input</direction>
-    <width>1</width>
-    <role>read_n</role>
-   </port>
-   <port>
     <name>iData</name>
     <direction>Input</direction>
     <width>32</width>
     <role>writedata</role>
    </port>
    <port>
+    <name>iWrite_n</name>
+    <direction>Input</direction>
+    <width>1</width>
+    <role>write_n</role>
+   </port>
+   <port>
     <name>oData</name>
     <direction>Output</direction>
     <width>32</width>
     <role>readdata</role>
+   </port>
+   <port>
+    <name>iAddress</name>
+    <direction>Input</direction>
+    <width>3</width>
+    <role>address</role>
    </port>
   </interface>
  </module>
@@ -5336,7 +5342,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="dataSlaveMapParam">
    <type>java.lang.String</type>
-   <value><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x8000' end='0x10000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x10800' end='0x11000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='PrimeNumberGenerator_0.avalon_slave_0_1' start='0x11000' end='0x11020' type='PrimeNumberGenerator.avalon_slave_0_1' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x11028' end='0x11030' type='altera_avalon_jtag_uart.avalon_jtag_slave' /><slave name='switches_0.avalon_slave_0' start='0x11030' end='0x11034' type='switches.avalon_slave_0' /><slave name='HexDecoder_3.avalon_slave_0' start='0x11034' end='0x11038' type='HexDecoder.avalon_slave_0' /><slave name='HexDecoder_2.avalon_slave_0' start='0x11038' end='0x1103C' type='HexDecoder.avalon_slave_0' /><slave name='HexDecoder_1.avalon_slave_0' start='0x1103C' end='0x11040' type='HexDecoder.avalon_slave_0' /><slave name='HexDecoder_0.avalon_slave_0' start='0x11040' end='0x11044' type='HexDecoder.avalon_slave_0' /></address-map>]]></value>
+   <value><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x8000' end='0x10000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x10800' end='0x11000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='PrimeNumberGenerator_0.avalon_slave_0' start='0x11000' end='0x11020' type='PrimeNumberGenerator.avalon_slave_0' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x11028' end='0x11030' type='altera_avalon_jtag_uart.avalon_jtag_slave' /><slave name='switches_0.avalon_slave_0' start='0x11030' end='0x11034' type='switches.avalon_slave_0' /><slave name='HexDecoder_3.avalon_slave_0' start='0x11034' end='0x11038' type='HexDecoder.avalon_slave_0' /><slave name='HexDecoder_2.avalon_slave_0' start='0x11038' end='0x1103C' type='HexDecoder.avalon_slave_0' /><slave name='HexDecoder_1.avalon_slave_0' start='0x1103C' end='0x11040' type='HexDecoder.avalon_slave_0' /><slave name='HexDecoder_0.avalon_slave_0' start='0x11040' end='0x11044' type='HexDecoder.avalon_slave_0' /></address-map>]]></value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -6053,8 +6059,8 @@ parameters are a RESULT of the module parameters. -->
    <memoryBlock>
     <isBridge>false</isBridge>
     <moduleName>PrimeNumberGenerator_0</moduleName>
-    <slaveName>avalon_slave_0_1</slaveName>
-    <name>PrimeNumberGenerator_0.avalon_slave_0_1</name>
+    <slaveName>avalon_slave_0</slaveName>
+    <name>PrimeNumberGenerator_0.avalon_slave_0</name>
     <baseAddress>69632</baseAddress>
     <span>32</span>
    </memoryBlock>
@@ -8670,11 +8676,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>avalon_slave_0</endConnectionPoint>
  </connection>
  <connection
-   name="nios2_gen2_0.data_master/PrimeNumberGenerator_0.avalon_slave_0_1"
+   name="nios2_gen2_0.data_master/PrimeNumberGenerator_0.avalon_slave_0"
    kind="avalon"
    version="18.1"
    start="nios2_gen2_0.data_master"
-   end="PrimeNumberGenerator_0.avalon_slave_0_1">
+   end="PrimeNumberGenerator_0.avalon_slave_0">
   <parameter name="arbitrationPriority">
    <type>int</type>
    <value>1</value>
@@ -8718,7 +8724,7 @@ parameters are a RESULT of the module parameters. -->
   <startModule>nios2_gen2_0</startModule>
   <startConnectionPoint>data_master</startConnectionPoint>
   <endModule>PrimeNumberGenerator_0</endModule>
-  <endConnectionPoint>avalon_slave_0_1</endConnectionPoint>
+  <endConnectionPoint>avalon_slave_0</endConnectionPoint>
  </connection>
  <connection
    name="nios2_gen2_0.data_master/nios2_gen2_0.debug_mem_slave"

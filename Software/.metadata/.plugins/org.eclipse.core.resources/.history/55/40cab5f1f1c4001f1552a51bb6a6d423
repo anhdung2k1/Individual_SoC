@@ -1,0 +1,8 @@
+#include "stdio.h"
+#include "io.h"
+#include "system.h"
+
+int main() {
+	printf("Working ?, If yes, say hello");
+	return 0;
+}
