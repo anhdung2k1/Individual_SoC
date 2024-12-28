@@ -2,8 +2,6 @@ Info: Starting: Create block symbol file (.bsf)
 Info: qsys-generate D:\SoC_code\system.qsys --block-symbol-file --output-directory=D:\SoC_code\system --family="Cyclone V" --part=5CSXFC6D6F31C6
 Progress: Loading SoC_code/system.qsys
 Progress: Reading input file
-Progress: Adding Adder_Avalon_0 [Adder_Avalon 1.0]
-Progress: Parameterizing module Adder_Avalon_0
 Progress: Adding HexDecoder_0 [HexDecoder 1.0]
 Progress: Parameterizing module HexDecoder_0
 Progress: Adding HexDecoder_1 [HexDecoder 1.0]
@@ -12,12 +10,8 @@ Progress: Adding HexDecoder_2 [HexDecoder 1.0]
 Progress: Parameterizing module HexDecoder_2
 Progress: Adding HexDecoder_3 [HexDecoder 1.0]
 Progress: Parameterizing module HexDecoder_3
-Progress: Adding Memory_0 [Memory 1.0]
-Progress: Parameterizing module Memory_0
-Progress: Adding Multiplier_Avalon_0 [Multiplier_Avalon 1.0]
-Progress: Parameterizing module Multiplier_Avalon_0
-Progress: Adding PrimeNumberGenerator_Avalon_0 [PrimeNumberGenerator_Avalon 1.0]
-Progress: Parameterizing module PrimeNumberGenerator_Avalon_0
+Progress: Adding PrimeNumberGenerator_0 [PrimeNumberGenerator 1.0]
+Progress: Parameterizing module PrimeNumberGenerator_0
 Progress: Adding clk_0 [clock_source 18.1]
 Progress: Parameterizing module clk_0
 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
@@ -40,8 +34,6 @@ Info: Starting: Create HDL design files for synthesis
 Info: qsys-generate D:\SoC_code\system.qsys --synthesis=VERILOG --output-directory=D:\SoC_code\system\synthesis --family="Cyclone V" --part=5CSXFC6D6F31C6
 Progress: Loading SoC_code/system.qsys
 Progress: Reading input file
-Progress: Adding Adder_Avalon_0 [Adder_Avalon 1.0]
-Progress: Parameterizing module Adder_Avalon_0
 Progress: Adding HexDecoder_0 [HexDecoder 1.0]
 Progress: Parameterizing module HexDecoder_0
 Progress: Adding HexDecoder_1 [HexDecoder 1.0]
@@ -50,12 +42,8 @@ Progress: Adding HexDecoder_2 [HexDecoder 1.0]
 Progress: Parameterizing module HexDecoder_2
 Progress: Adding HexDecoder_3 [HexDecoder 1.0]
 Progress: Parameterizing module HexDecoder_3
-Progress: Adding Memory_0 [Memory 1.0]
-Progress: Parameterizing module Memory_0
-Progress: Adding Multiplier_Avalon_0 [Multiplier_Avalon 1.0]
-Progress: Parameterizing module Multiplier_Avalon_0
-Progress: Adding PrimeNumberGenerator_Avalon_0 [PrimeNumberGenerator_Avalon 1.0]
-Progress: Parameterizing module PrimeNumberGenerator_Avalon_0
+Progress: Adding PrimeNumberGenerator_0 [PrimeNumberGenerator 1.0]
+Progress: Parameterizing module PrimeNumberGenerator_0
 Progress: Adding clk_0 [clock_source 18.1]
 Progress: Parameterizing module clk_0
 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
@@ -72,9 +60,7 @@ Progress: Validating
 Progress: Done reading input file
 Info: system.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info: system: Generating system "system" for QUARTUS_SYNTH
-Warning: Translator Adder_Avalon_0_avalon_slave_0_translator failed to match interface Adder_Avalon_0.avalon_slave_0
-Warning: Translator Multiplier_Avalon_0_avalon_slave_0_translator failed to match interface Multiplier_Avalon_0.avalon_slave_0
-Warning: Translator PrimeNumberGenerator_Avalon_0_avalon_slave_0_translator failed to match interface PrimeNumberGenerator_Avalon_0.avalon_slave_0
+Warning: Translator PrimeNumberGenerator_0_avalon_slave_0_translator failed to match interface PrimeNumberGenerator_0.avalon_slave_0
 Info: system: Done "system" with 1 modules, 0 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

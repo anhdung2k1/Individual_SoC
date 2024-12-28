@@ -48,14 +48,6 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name SYSTEMVERILOG_FILE PrimeNumberGenerator_Avalon.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Mutiplier_Avalon.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Adder_Avalon.sv
-set_global_assignment -name QIP_FILE system/synthesis/system.qip
-set_global_assignment -name SYSTEMVERILOG_FILE HexDecoder.sv
-set_global_assignment -name SYSTEMVERILOG_FILE switches.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Memory.sv
-set_global_assignment -name SYSTEMVERILOG_FILE PrimeNumber.sv
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50 -entity DE10_Standard_VIP_TV
 set_instance_assignment -name IO_STANDARD "2.5 V" -to CLOCK3_50 -entity DE10_Standard_VIP_TV
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK4_50 -entity DE10_Standard_VIP_TV
@@ -775,3 +767,13 @@ set_global_assignment -name PARTITION_COLOR 16764057 -entity DE10_Standard_VIP_T
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity Soc -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity Soc -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -entity Soc -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name QIP_FILE system/synthesis/system.qip
+set_global_assignment -name SYSTEMVERILOG_FILE Individual_SoC.sv
+set_global_assignment -name SYSTEMVERILOG_FILE HexDecoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE switches.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Memory.sv
+set_global_assignment -name SYSTEMVERILOG_FILE PrimeNumberGenerator.sv
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

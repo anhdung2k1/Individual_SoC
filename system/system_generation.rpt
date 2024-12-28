@@ -2,8 +2,6 @@ Info: Starting: Create block symbol file (.bsf)
 Info: qsys-generate D:\SoC_code\system.qsys --block-symbol-file --output-directory=D:\SoC_code\system --family="Cyclone V" --part=5CSXFC6D6F31C6
 Progress: Loading SoC_code/system.qsys
 Progress: Reading input file
-Progress: Adding Adder_Avalon_0 [Adder_Avalon 1.0]
-Progress: Parameterizing module Adder_Avalon_0
 Progress: Adding HexDecoder_0 [HexDecoder 1.0]
 Progress: Parameterizing module HexDecoder_0
 Progress: Adding HexDecoder_1 [HexDecoder 1.0]
@@ -12,12 +10,8 @@ Progress: Adding HexDecoder_2 [HexDecoder 1.0]
 Progress: Parameterizing module HexDecoder_2
 Progress: Adding HexDecoder_3 [HexDecoder 1.0]
 Progress: Parameterizing module HexDecoder_3
-Progress: Adding Memory_0 [Memory 1.0]
-Progress: Parameterizing module Memory_0
-Progress: Adding Multiplier_Avalon_0 [Multiplier_Avalon 1.0]
-Progress: Parameterizing module Multiplier_Avalon_0
-Progress: Adding PrimeNumberGenerator_Avalon_0 [PrimeNumberGenerator_Avalon 1.0]
-Progress: Parameterizing module PrimeNumberGenerator_Avalon_0
+Progress: Adding PrimeNumberGenerator_0 [PrimeNumberGenerator 1.0]
+Progress: Parameterizing module PrimeNumberGenerator_0
 Progress: Adding clk_0 [clock_source 18.1]
 Progress: Parameterizing module clk_0
 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
@@ -40,8 +34,6 @@ Info: Starting: Create HDL design files for synthesis
 Info: qsys-generate D:\SoC_code\system.qsys --synthesis=VERILOG --output-directory=D:\SoC_code\system\synthesis --family="Cyclone V" --part=5CSXFC6D6F31C6
 Progress: Loading SoC_code/system.qsys
 Progress: Reading input file
-Progress: Adding Adder_Avalon_0 [Adder_Avalon 1.0]
-Progress: Parameterizing module Adder_Avalon_0
 Progress: Adding HexDecoder_0 [HexDecoder 1.0]
 Progress: Parameterizing module HexDecoder_0
 Progress: Adding HexDecoder_1 [HexDecoder 1.0]
@@ -50,12 +42,8 @@ Progress: Adding HexDecoder_2 [HexDecoder 1.0]
 Progress: Parameterizing module HexDecoder_2
 Progress: Adding HexDecoder_3 [HexDecoder 1.0]
 Progress: Parameterizing module HexDecoder_3
-Progress: Adding Memory_0 [Memory 1.0]
-Progress: Parameterizing module Memory_0
-Progress: Adding Multiplier_Avalon_0 [Multiplier_Avalon 1.0]
-Progress: Parameterizing module Multiplier_Avalon_0
-Progress: Adding PrimeNumberGenerator_Avalon_0 [PrimeNumberGenerator_Avalon 1.0]
-Progress: Parameterizing module PrimeNumberGenerator_Avalon_0
+Progress: Adding PrimeNumberGenerator_0 [PrimeNumberGenerator 1.0]
+Progress: Parameterizing module PrimeNumberGenerator_0
 Progress: Adding clk_0 [clock_source 18.1]
 Progress: Parameterizing module clk_0
 Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
@@ -72,9 +60,68 @@ Progress: Validating
 Progress: Done reading input file
 Info: system.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info: system: Generating system "system" for QUARTUS_SYNTH
-Warning: Translator Adder_Avalon_0_avalon_slave_0_translator failed to match interface Adder_Avalon_0.avalon_slave_0
-Warning: Translator Multiplier_Avalon_0_avalon_slave_0_translator failed to match interface Multiplier_Avalon_0.avalon_slave_0
-Warning: Translator PrimeNumberGenerator_Avalon_0_avalon_slave_0_translator failed to match interface PrimeNumberGenerator_Avalon_0.avalon_slave_0
-Info: system: Done "system" with 1 modules, 0 files
+Info: HexDecoder_0: "system" instantiated HexDecoder "HexDecoder_0"
+Info: PrimeNumberGenerator_0: "system" instantiated PrimeNumberGenerator "PrimeNumberGenerator_0"
+Info: jtag_uart_0: Starting RTL generation for module 'system_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec E:/quartus/quartus/bin64/perl/bin/perl.exe -I E:/quartus/quartus/bin64/perl/lib -I E:/quartus/quartus/sopc_builder/bin/europa -I E:/quartus/quartus/sopc_builder/bin/perl_lib -I E:/quartus/quartus/sopc_builder/bin -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/common -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=system_jtag_uart_0 --dir=C:/Users/ANHDUN~1/AppData/Local/Temp/alt0085_6174833660960430077.dir/0006_jtag_uart_0_gen/ --quartus_dir=E:/quartus/quartus --verilog --config=C:/Users/ANHDUN~1/AppData/Local/Temp/alt0085_6174833660960430077.dir/0006_jtag_uart_0_gen//system_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0: Done RTL generation for module 'system_jtag_uart_0'
+Info: jtag_uart_0: "system" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: nios2_gen2_0: "system" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'system_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec E:/quartus/quartus/bin64/perl/bin/perl.exe -I E:/quartus/quartus/bin64/perl/lib -I E:/quartus/quartus/sopc_builder/bin/europa -I E:/quartus/quartus/sopc_builder/bin/perl_lib -I E:/quartus/quartus/sopc_builder/bin -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/common -I E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- E:/quartus/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=system_onchip_memory2_0 --dir=C:/Users/ANHDUN~1/AppData/Local/Temp/alt0085_6174833660960430077.dir/0007_onchip_memory2_0_gen/ --quartus_dir=E:/quartus/quartus --verilog --config=C:/Users/ANHDUN~1/AppData/Local/Temp/alt0085_6174833660960430077.dir/0007_onchip_memory2_0_gen//system_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'system_onchip_memory2_0'
+Info: onchip_memory2_0: "system" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: switches_0: "system" instantiated switches "switches_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "system" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "system" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'system_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec E:/Quartus/quartus/bin64//eperlcmd.exe -I E:/Quartus/quartus/bin64//perl/lib -I E:/quartus/quartus/sopc_builder/bin/europa -I E:/quartus/quartus/sopc_builder/bin/perl_lib -I E:/quartus/quartus/sopc_builder/bin -I E:/quartus/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I E:/quartus/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I E:/quartus/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I E:/quartus/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- E:/quartus/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=system_nios2_gen2_0_cpu --dir=C:/Users/ANHDUN~1/AppData/Local/Temp/alt0085_6174833660960430077.dir/0011_cpu_gen/ --quartus_bindir=E:/Quartus/quartus/bin64/ --verilog --config=C:/Users/ANHDUN~1/AppData/Local/Temp/alt0085_6174833660960430077.dir/0011_cpu_gen//system_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2024.12.28 11:04:33 (*) Starting Nios II generation
+Info: cpu: # 2024.12.28 11:04:33 (*)   Checking for plaintext license.
+Info: cpu: # 2024.12.28 11:04:34 (*)   Couldn't query license setup in Quartus directory E:/Quartus/quartus/bin64/
+Info: cpu: # 2024.12.28 11:04:34 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2024.12.28 11:04:34 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2024.12.28 11:04:34 (*)   Plaintext license not found.
+Info: cpu: # 2024.12.28 11:04:34 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2024.12.28 11:04:34 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2024.12.28 11:04:34 (*)   Creating all objects for CPU
+Info: cpu: # 2024.12.28 11:04:35 (*)   Generating RTL from CPU objects
+Info: cpu: # 2024.12.28 11:04:35 (*)   Creating plain-text RTL
+Info: cpu: # 2024.12.28 11:04:35 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'system_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file D:/SoC_code/system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/SoC_code/system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file D:/SoC_code/system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: system: Done "system" with 30 modules, 43 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis
