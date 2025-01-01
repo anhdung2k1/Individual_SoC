@@ -1,9 +1,9 @@
-16:14:48 **** Incremental Build of configuration Nios II for project prime_number ****
+16:15:29 **** Incremental Build of configuration Nios II for project prime_number ****
 make all 
 Info: Building ../prime_number_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../prime_number_bsp/
 [BSP build complete]
 [prime_number build complete]
 
-16:14:49 Build Finished (took 779ms)
+16:15:30 Build Finished (took 739ms)
 

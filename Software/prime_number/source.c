@@ -35,7 +35,7 @@ int main() {
         uint32_t switches = IORD(SWITCHES_0_BASE, 0);
 
         // Generate primes based on SW[7:0]
-        uint32_t start_prime = (switches & 0xFF) + 1;
+        uint32_t start_prime = (switches & 0xFF);
         handle_write(FUNC_PRIME_GEN, start_prime + 255);
 
         // Use SW9 to control multiplier
@@ -45,7 +45,7 @@ int main() {
             handle_write(FUNC_MULTIPLIER, multiplier_input1); // Write to m1
             handle_write(FUNC_MULTIPLIER_M2, multiplier_input2); // Write to m2
             uint32_t multiplier_result = handle_read(FUNC_MULTIPLIER, 0);
-            printf("Multiplier result: %u\n", (unsigned int)multiplier_result);
+            printf("Multiplier result: %u * %u = %u\n", (unsigned int)multiplier_input1, (unsigned int)multiplier_input2, (unsigned int)multiplier_result);
             write_to_hex_decoders_2(multiplier_result); // Display result on HEX2 and HEX3
         } else {
             // Clear HEX2 and HEX3 when SW9 is off
@@ -60,21 +60,13 @@ int main() {
             handle_write(FUNC_ADDER, adder_input1); // Write to p1
             handle_write(FUNC_ADDER_P2, adder_input2); // Write to p2
             uint32_t adder_result = handle_read(FUNC_ADDER, 0);
-            printf("Adder result: %u\n", (unsigned int)adder_result);
+            printf("Adder result: %u + %u = %u\n", (unsigned int)adder_input1, (unsigned int)adder_input2, (unsigned int)adder_result);
             write_to_hex_decoders_1(adder_result); // Display result on HEX0 and HEX1
         } else {
             // Clear HEX0 and HEX1 when SW8 is off
             IOWR(HEXDECODER_0_BASE, 0, 0);
             IOWR(HEXDECODER_1_BASE, 0, 0);
         }
-
-        // Print the first 10 primes for debugging
-        printf("Generated primes: ");
-        for (int i = 0; i < 10; i++) {
-            uint32_t prime = handle_read(FUNC_PRIME_GEN, i);
-            printf("%u ", (unsigned int)prime);
-        }
-        printf("\n");
     }
 
     return 0;
@@ -152,7 +144,7 @@ void write_to_hex_decoders_1(uint32_t value) {
 }
 
 void write_to_hex_decoders_2(uint32_t value) {
-    uint8_t digit_3 = (value / 10) % 10;
+	uint8_t digit_3 = (value / 10) % 10;
     uint8_t digit_2 = value % 10;
 
     IOWR(HEXDECODER_2_BASE, 0, digit_2);

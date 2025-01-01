@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'system'
  * SOPC Builder design path: ../../system.sopcinfo
  *
- * Generated: Sat Dec 28 14:46:44 ICT 2024
+ * Generated: Tue Dec 31 15:59:43 ICT 2024
  */
 
 /*
@@ -147,7 +147,7 @@
  */
 
 #define ALT_MODULE_CLASS_HexDecoder_0 HexDecoder
-#define HEXDECODER_0_BASE 0x11040
+#define HEXDECODER_0_BASE 0x11048
 #define HEXDECODER_0_IRQ -1
 #define HEXDECODER_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define HEXDECODER_0_NAME "/dev/HexDecoder_0"
@@ -161,7 +161,7 @@
  */
 
 #define ALT_MODULE_CLASS_HexDecoder_1 HexDecoder
-#define HEXDECODER_1_BASE 0x1103c
+#define HEXDECODER_1_BASE 0x11044
 #define HEXDECODER_1_IRQ -1
 #define HEXDECODER_1_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define HEXDECODER_1_NAME "/dev/HexDecoder_1"
@@ -175,7 +175,7 @@
  */
 
 #define ALT_MODULE_CLASS_HexDecoder_2 HexDecoder
-#define HEXDECODER_2_BASE 0x11038
+#define HEXDECODER_2_BASE 0x11040
 #define HEXDECODER_2_IRQ -1
 #define HEXDECODER_2_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define HEXDECODER_2_NAME "/dev/HexDecoder_2"
@@ -189,7 +189,7 @@
  */
 
 #define ALT_MODULE_CLASS_HexDecoder_3 HexDecoder
-#define HEXDECODER_3_BASE 0x11034
+#define HEXDECODER_3_BASE 0x1103c
 #define HEXDECODER_3_IRQ -1
 #define HEXDECODER_3_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define HEXDECODER_3_NAME "/dev/HexDecoder_3"
@@ -311,7 +311,7 @@
  */
 
 #define ALT_MODULE_CLASS_switches_0 switches
-#define SWITCHES_0_BASE 0x11030
+#define SWITCHES_0_BASE 0x11038
 #define SWITCHES_0_IRQ -1
 #define SWITCHES_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SWITCHES_0_NAME "/dev/switches_0"

@@ -1,5 +1,5 @@
 Flow report for Individual_SoC
-Sat Dec 28 14:30:16 2024
+Tue Dec 31 16:40:15 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Dec 28 14:30:03 2024       ;
+; Flow Status                     ; Successful - Tue Dec 31 16:40:02 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Individual_SoC                              ;
 ; Top-level Entity Name           ; Individual_SoC                              ;
@@ -48,7 +48,7 @@ refer to the applicable agreement for further details.
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 1,226 / 41,910 ( 3 % )                      ;
-; Total registers                 ; 2516                                        ;
+; Total registers                 ; 2499                                        ;
 ; Total pins                      ; 46 / 499 ( 9 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 282,624 / 5,662,720 ( 5 % )                 ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/28/2024 14:27:23 ;
+; Start date & time ; 12/31/2024 16:37:14 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Individual_SoC      ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+----------------------+------------------+
 ; Assignment Name                     ; Value                                                                                                                                                                                                                                                                                                                                 ; Default Value ; Entity Name          ; Section Id       ;
 +-------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+----------------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 1095904766454.173537084312916                                                                                                                                                                                                                                                                                                         ; --            ; --                   ; --               ;
+; COMPILER_SIGNATURE_ID               ; 1095904766454.173563783324564                                                                                                                                                                                                                                                                                                         ; --            ; --                   ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                                                                                                                                                                                                                                                                                                    ; --            ; --                   ; --               ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                                                                                                                                                                                                                                                                    ; --            ; --                   ; --               ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                                                                                                                                                                                                                                                                     ; --            ; --                   ; --               ;
@@ -99,7 +99,7 @@ refer to the applicable agreement for further details.
 ; SLD_FILE                            ; system/synthesis/system.regmap                                                                                                                                                                                                                                                                                                        ; --            ; --                   ; --               ;
 ; SLD_FILE                            ; system/synthesis/system.debuginfo                                                                                                                                                                                                                                                                                                     ; --            ; --                   ; --               ;
 ; SLD_FILE                            ; db/stp3_auto_stripped.stp                                                                                                                                                                                                                                                                                                             ; --            ; --                   ; --               ;
-; SLD_INFO                            ; QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1735369742                                                                                                                                                                                                                                                                              ; --            ; system               ; --               ;
+; SLD_INFO                            ; QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1735635099                                                                                                                                                                                                                                                                              ; --            ; system               ; --               ;
 ; SLD_NODE_CREATOR_ID                 ; 110                                                                                                                                                                                                                                                                                                                                   ; --            ; --                   ; auto_signaltap_0 ;
 ; SLD_NODE_ENTITY_NAME                ; sld_signaltap                                                                                                                                                                                                                                                                                                                         ; --            ; --                   ; auto_signaltap_0 ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_RAM_BLOCK_TYPE=AUTO                                                                                                                                                                                                                                                                                                               ; --            ; --                   ; auto_signaltap_0 ;
@@ -140,11 +140,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:03     ; 1.0                     ; 5021 MB             ; 00:01:19                           ;
-; Fitter               ; 00:01:21     ; 1.2                     ; 6728 MB             ; 00:03:23                           ;
-; Assembler            ; 00:00:09     ; 1.0                     ; 4873 MB             ; 00:00:09                           ;
-; Timing Analyzer      ; 00:00:12     ; 2.1                     ; 5225 MB             ; 00:00:22                           ;
-; Total                ; 00:02:45     ; --                      ; --                  ; 00:05:13                           ;
+; Analysis & Synthesis ; 00:01:04     ; 1.0                     ; 5003 MB             ; 00:01:18                           ;
+; Fitter               ; 00:01:27     ; 1.2                     ; 6737 MB             ; 00:03:30                           ;
+; Assembler            ; 00:00:10     ; 1.0                     ; 4880 MB             ; 00:00:10                           ;
+; Timing Analyzer      ; 00:00:12     ; 2.1                     ; 5227 MB             ; 00:00:22                           ;
+; Total                ; 00:02:53     ; --                      ; --                  ; 00:05:20                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

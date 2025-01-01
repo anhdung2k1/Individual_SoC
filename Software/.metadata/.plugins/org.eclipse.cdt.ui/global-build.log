@@ -1,4 +1,4 @@
-16:14:32 **** Incremental Build of configuration Nios II for project prime_number ****
+16:01:33 **** Incremental Build of configuration Nios II for project prime_number ****
 make all 
 Info: Building ../prime_number_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../prime_number_bsp/
@@ -13,13 +13,25 @@ Info:                    20 KBytes free for stack + heap.
 Info: Creating prime_number.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source prime_number.elf >prime_number.objdump
 [prime_number build complete]
-16:14:47 **** Build of configuration Nios II for project prime_number ****
+16:01:39 **** Build of configuration Nios II for project prime_number ****
 make all 
 Info: Building ../prime_number_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../prime_number_bsp/
 [BSP build complete]
 [prime_number build complete]
-16:14:48 **** Incremental Build of configuration Nios II for project prime_number ****
+16:01:40 **** Incremental Build of configuration Nios II for project prime_number ****
+make all 
+Info: Building ../prime_number_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../prime_number_bsp/
+[BSP build complete]
+[prime_number build complete]
+16:15:27 **** Build of configuration Nios II for project prime_number ****
+make all 
+Info: Building ../prime_number_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../prime_number_bsp/
+[BSP build complete]
+[prime_number build complete]
+16:15:29 **** Incremental Build of configuration Nios II for project prime_number ****
 make all 
 Info: Building ../prime_number_bsp/
 C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../prime_number_bsp/

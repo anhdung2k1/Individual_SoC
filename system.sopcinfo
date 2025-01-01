@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="system" kind="system" version="1.0" fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2024.12.28.14:09:02 -->
+ <!-- 2024.12.31.15:51:39 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1735369742</value>
+  <value>1735635099</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -5342,7 +5342,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="dataSlaveMapParam">
    <type>java.lang.String</type>
-   <value><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x8000' end='0x10000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x10800' end='0x11000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='PrimeNumberGenerator_0.avalon_slave_0' start='0x11000' end='0x11020' type='PrimeNumberGenerator.avalon_slave_0' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x11028' end='0x11030' type='altera_avalon_jtag_uart.avalon_jtag_slave' /><slave name='switches_0.avalon_slave_0' start='0x11030' end='0x11034' type='switches.avalon_slave_0' /><slave name='HexDecoder_3.avalon_slave_0' start='0x11034' end='0x11038' type='HexDecoder.avalon_slave_0' /><slave name='HexDecoder_2.avalon_slave_0' start='0x11038' end='0x1103C' type='HexDecoder.avalon_slave_0' /><slave name='HexDecoder_1.avalon_slave_0' start='0x1103C' end='0x11040' type='HexDecoder.avalon_slave_0' /><slave name='HexDecoder_0.avalon_slave_0' start='0x11040' end='0x11044' type='HexDecoder.avalon_slave_0' /></address-map>]]></value>
+   <value><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x8000' end='0x10000' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x10800' end='0x11000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='PrimeNumberGenerator_0.avalon_slave_0' start='0x11000' end='0x11020' type='PrimeNumberGenerator.avalon_slave_0' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x11028' end='0x11030' type='altera_avalon_jtag_uart.avalon_jtag_slave' /><slave name='switches_0.avalon_slave_0' start='0x11038' end='0x1103C' type='switches.avalon_slave_0' /><slave name='HexDecoder_3.avalon_slave_0' start='0x1103C' end='0x11040' type='HexDecoder.avalon_slave_0' /><slave name='HexDecoder_2.avalon_slave_0' start='0x11040' end='0x11044' type='HexDecoder.avalon_slave_0' /><slave name='HexDecoder_1.avalon_slave_0' start='0x11044' end='0x11048' type='HexDecoder.avalon_slave_0' /><slave name='HexDecoder_0.avalon_slave_0' start='0x11048' end='0x1104C' type='HexDecoder.avalon_slave_0' /></address-map>]]></value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -6021,7 +6021,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>HexDecoder_0</moduleName>
     <slaveName>avalon_slave_0</slaveName>
     <name>HexDecoder_0.avalon_slave_0</name>
-    <baseAddress>69696</baseAddress>
+    <baseAddress>69704</baseAddress>
     <span>4</span>
    </memoryBlock>
    <memoryBlock>
@@ -6029,7 +6029,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>HexDecoder_1</moduleName>
     <slaveName>avalon_slave_0</slaveName>
     <name>HexDecoder_1.avalon_slave_0</name>
-    <baseAddress>69692</baseAddress>
+    <baseAddress>69700</baseAddress>
     <span>4</span>
    </memoryBlock>
    <memoryBlock>
@@ -6037,7 +6037,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>HexDecoder_2</moduleName>
     <slaveName>avalon_slave_0</slaveName>
     <name>HexDecoder_2.avalon_slave_0</name>
-    <baseAddress>69688</baseAddress>
+    <baseAddress>69696</baseAddress>
     <span>4</span>
    </memoryBlock>
    <memoryBlock>
@@ -6045,7 +6045,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>HexDecoder_3</moduleName>
     <slaveName>avalon_slave_0</slaveName>
     <name>HexDecoder_3.avalon_slave_0</name>
-    <baseAddress>69684</baseAddress>
+    <baseAddress>69692</baseAddress>
     <span>4</span>
    </memoryBlock>
    <memoryBlock>
@@ -6053,7 +6053,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>switches_0</moduleName>
     <slaveName>avalon_slave_0</slaveName>
     <name>switches_0.avalon_slave_0</name>
-    <baseAddress>69680</baseAddress>
+    <baseAddress>69688</baseAddress>
     <span>4</span>
    </memoryBlock>
    <memoryBlock>
@@ -8436,7 +8436,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00011040</value>
+   <value>0x00011048</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -8487,7 +8487,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x0001103c</value>
+   <value>0x00011044</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -8538,7 +8538,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00011038</value>
+   <value>0x00011040</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -8589,7 +8589,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00011034</value>
+   <value>0x0001103c</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -8640,7 +8640,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x00011030</value>
+   <value>0x00011038</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
